@@ -1,0 +1,144 @@
+{
+    "story":
+    {
+        "uid": "multiple-scenes-story",
+        "name": "Multiple Scenes Story",
+        "slug": "multiple-scenes-story",
+        "description": "This project have multiple scenes",
+        "default": "scene-3",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-1",
+                "name": "First scene",
+                "slug": "first-scene",
+                "description": "This is the first scene",
+
+                "media":
+                {
+                    "uid": "media-1",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "img/01-forest.jpg"
+                    }
+                }
+            },
+
+            {
+                "uid": "scene-2",
+                "name": "Second scene",
+                "slug": "second-scene",
+                "description": "This is the second scene",
+
+                "media":
+                {
+                    "uid": "media-2",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "img/02-sand.jpg"
+                    }
+                }
+            },
+
+            {
+                "uid": "scene-3",
+                "name": "Third scene",
+                "slug": "third-scene",
+                "description": "This is the third and last scene",
+
+                "media":
+                {
+                    "uid": "media-3",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "equi",
+                        "url": "img/03-snow.jpg"
+                    }
+                }
+            }
+        ]
+    },
+
+    "actions":
+    [
+        {
+            "uid": "action-prev",
+            "target": "viewer.story",
+
+            "method":
+            {
+                "name": "previousScene"
+            }
+        },
+
+        {
+            "uid": "action-next",
+            "target": "viewer.story",
+
+            "method":
+            {
+                "name": "nextScene"
+            }
+        }
+    ],
+
+    "plugins":
+    {
+        "prefix": "../../plugins/",
+
+        "engines":
+        [
+            {
+                "uid": "org.forgejs.simplebutton",
+                "url": "SimpleButton/",
+                "manifest": "manifest.json"
+            }
+        ],
+
+        "instances":
+        [
+            {
+                "uid": "simplebutton-previous",
+                "engine": "org.forgejs.simplebutton",
+
+                "options":
+                {
+                    "left": 5,
+                    "verticalCenter": true,
+                    "value": "Previous"
+                },
+
+                "events":
+                {
+                    "onClick": ["action-prev"]
+                }
+            },
+
+            {
+                "uid": "simplebutton-next",
+                "engine": "org.forgejs.simplebutton",
+
+                "options":
+                {
+                    "right": 5,
+                    "verticalCenter": true,
+                    "value": "Next"
+                },
+
+                "events":
+                {
+                    "onClick": ["action-next"]
+                }
+            }
+        ]
+    }
+}

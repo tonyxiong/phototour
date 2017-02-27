@@ -81,7 +81,7 @@
 
                 "keyframes":
                 [
-                    { "time": 0,     "data": { "yaw": 0,    "pitch": -90,  "roll":null,   "fov": 280 } },
+                    { "time": 0,     "data": { "yaw": -90,    "pitch": -90,  "roll":null,   "fov": 320 } },
                     { "time": 6500,  "data": { "yaw": null,	"pitch": 0,	   "roll":null,	  "fov": 90 } }
                 ]
             }

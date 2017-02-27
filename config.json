@@ -48,7 +48,7 @@
 
                     "fov":
                     {
-                        "default": 220
+                        "default": 280
                     }
                 },
 
@@ -81,7 +81,7 @@
 
                 "keyframes":
                 [
-                    { "time": 0,     "data": { "yaw": 0,    "pitch": -90,  "roll":null,   "fov": 220 } },
+                    { "time": 0,     "data": { "yaw": 0,    "pitch": -90,  "roll":null,   "fov": 280 } },
                     { "time": 6500,  "data": { "yaw": null,	"pitch": 0,	   "roll":null,	  "fov": 90 } }
                 ]
             }

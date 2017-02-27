@@ -1,9 +1,5 @@
 {
-   "controllers":
-    {
-        "enabled": false
-    },
-	
+
     "story":
     {
         "uid": "director-story",

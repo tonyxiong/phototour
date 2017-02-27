@@ -1,7 +1,7 @@
 {
    "controllers":
     {
-        "enabled": true
+        "enabled": false
     },
 	
     "story":

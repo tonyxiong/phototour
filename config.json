@@ -1096,28 +1096,28 @@
             {
                 "uid": "org.forgejs.localeselector",
                 "url": "LocaleSelector/",
-                "prefix": "../../plugins/",
+                "prefix": "plugins/",
                 "manifest": "manifest.json"
             },
 
             {
                 "uid": "org.forgejs.simplebutton",
                 "url": "SimpleButton/",
-                "prefix": "../../plugins/",
+                "prefix": "plugins/",
                 "manifest": "manifest.json"
             },
 
             {
                 "uid": "org.forgejs.simpletext",
                 "url": "SimpleText/",
-                "prefix": "../../plugins/",
+                "prefix": "plugins/",
                 "manifest": "manifest.json"
             },
 
             {
                 "uid": "org.forgejs.simpleimage",
                 "url": "SimpleImage/",
-                "prefix": "../../plugins/",
+                "prefix": "plugins/",
                 "manifest": "manifest.json"
             },
 
@@ -1148,7 +1148,7 @@
             {
                 "uid": "org.forgejs.simplevideo",
                 "url": "SimpleVideo/",
-                "prefix": "../../plugins/",
+                "prefix": "plugins/",
                 "manifest": "manifest.json"
             },
 

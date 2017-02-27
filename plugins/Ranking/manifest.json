@@ -1,0 +1,63 @@
+{
+    "uid": "org.forgejs.ranking",
+    "name": "Ranking",
+    "shortName": "ranking",
+    "version": "1.0.0",
+    "versionName": "Ranking 1.0.0",
+    "description": "Display the current ranking among drivers",
+
+    "author":
+    {
+        "name": "GoPro",
+        "website": "hhttps://forgejs.org"
+    },
+
+    "licence": "Apache 2",
+
+    "options":
+    {
+        "width": 250,
+        "height": 80,
+
+        "top": null,
+        "left": null,
+        "right": null,
+        "bottom": null,
+
+        "margin": 10,
+
+        "borderColor": "black",
+        "borderSize": 5,
+
+        "source": "media",
+
+        "font":
+        {
+            "color": "black",
+            "size": 25,
+            "family": "pfdintextprolight"
+        },
+
+        "drivers":
+        [
+            {
+                "name": "John Doe",
+                "type": "video",
+                "thumb": "videos/johndoe_pov.mp4",
+                "streaming": "html5",
+                "scenes": null,
+
+                "keyframes": [
+                    { "ts": 0, "rank": 0 }
+                ]
+            }
+        ]
+    },
+
+    "sources":
+    [
+        "src/Ranking.js"
+    ],
+
+    "constructor": "ForgePlugins.Ranking"
+}

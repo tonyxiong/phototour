@@ -1,168 +1,279 @@
 {
+    "viewer":
+    {
+        "background": "#000"
+    },
+
     "history":
     {
         "enabled": true
     },
 
-    "camera":
+    "i18n":
     {
-        "roll":
-        {
-            "default": 0,
-            "min": -20,
-            "max": 20
-        },
+        "enabled": true,
 
-        "fov":
-        {
-            "default": 90,
-            "min": 50,
-            "max": 120
-        }
-    },
-
-    "story":
-    {
-        "uid": "hotspots-actions-story",
-        "name": "Hotspots with actions Story",
-        "slug": "hotspots-actions-story",
-        "description": "This is sample of hotspots actions",
-
-        "scenes":
+        "locales":
         [
             {
-                "uid": "scene-0",
-                "name": "First Scene",
-                "slug": "first-scene",
-                "description": "This is the first scene",
-
-                "media":
-                {
-                    "uid": "media-0",
-                    "type": "image",
-
-                    "source":
-                    {
-                        "format": "equi",
-                        "url": "img/pano-0.jpg"
-                    }
-                },
-
-                "view":
-                {
-                    "type": "rectilinear"
-                },
-
-                "camera":
-                {
-                    "yaw":
-                    {
-                        "default": 4
-                    }
-                },
-
-                "hotspots":
+                "uid": "en-US",
+                "name": "English",
+                "files":
                 [
                     {
-                        "uid": "hotspot-s0-0",
-
-                        "transform":
-                        {
-                            "position":
-                            {
-                                "theta": 0,
-                                "phi": -10.5,
-                                "radius": 400
-                            },
-
-                            "rotation":
-                            {
-                                "x": 80
-                            }
-                        },
-
-                        "material":
-                        {
-                            "image": "img/ChevronUpCircle_white_64.png",
-                            "opacity": 1
-                        },
-
-                        "events":
-                        {
-                            "onClick": ["action-loadscene-1", "action-camera-0"]
-                        }
-                    },
-
-                    {
-                        "uid": "hotspot-s0-1",
-
-                        "transform":
-                        {
-                            "position":
-                            {
-                                "theta": 82,
-                                "phi": -8,
-                                "radius": 400
-                            },
-
-                            "rotation":
-                            {
-                                "x": 85,
-                                "y": -82,
-                                "z": -15
-                            }
-                        },
-
-                        "material":
-                        {
-                            "image": "img/ChevronUpCircle_white_64.png",
-                            "opacity": 1
-                        },
-
-                        "events":
-                        {
-                            "onClick": ["action-loadscene-3", "action-camera-1"]
-                        }
-                    },
-
-                    {
-                        "uid": "hotspot-s0-2",
-
-                        "transform":
-                        {
-                            "position":
-                            {
-                                "theta": 141,
-                                "phi": -8,
-                                "radius": 400
-                            },
-
-                            "rotation":
-                            {
-                                "x": 85,
-                                "y": -141
-                            }
-                        },
-
-                        "material":
-                        {
-                            "image": "img/ChevronUpCircle_white_64.png",
-                            "opacity": 1
-                        },
-
-                        "events":
-                        {
-                            "onClick": ["action-loadscene-4", "action-camera-2"]
-                        }
+                        "key": "project.en-US",
+                        "url": "./i18n/en-US/locale.json"
                     }
                 ]
             },
 
             {
+                "uid": "fr-FR",
+                "name": "French",
+                "files":
+                [
+                    {
+                        "key": "project.fr-FR",
+                        "url": "./i18n/fr-FR/locale.json"
+                    }
+                ]
+            },
+
+            {
+                "uid": "it-IT",
+                "name": "Italian",
+                "files":
+                [
+                    {
+                        "key": "project.it-IT",
+                        "url": "./i18n/it-IT/locale.json"
+                    }
+                ]
+            }
+        ],
+
+        "default": "en-US"
+    },
+
+    "audio":
+    {
+        "enabled": true,
+
+        "volume":
+        {
+            "default": 1.0,
+            "max": 1.0
+        }
+    },
+
+    "playlists":
+    {
+        "enabled": false,
+        "loop": true,
+        "autoPlay": true,
+
+        "volume":
+        {
+            "default": 1.0,
+            "max": 1.0
+        },
+
+        "default": "playlist-0",
+
+        "lists":
+        [
+            {
+                "uid": "playlist-0",
+                "name": "driver-selection",
+                "default": "playlist-0-track-0",
+
+                "tracks": ["playlist-0-track-0"]
+            },
+
+            {
+                "uid": "playlist-1",
+                "name": "karting",
+                "default": "playlist-1-track-0",
+
+                "tracks": ["playlist-1-track-0", "playlist-1-track-1", "playlist-1-track-2"]
+            }
+        ],
+
+        "tracks":
+        [
+            {
+                "uid": "playlist-0-track-0",
+                "author": "Everlone",
+                "name": "Flying Alaska",
+                "url": "https://cdn.forgejs.org/samples/vrrroom/audio/Everlone-Flying_Alaska.mp3"
+            },
+
+            {
+                "uid": "playlist-1-track-0",
+                "author": "",
+                "name": "",
+                "url": "https://cdn.forgejs.org/samples/vrrroom/audio/Double-Trouble.mp3"
+            },
+
+            {
+                "uid": "playlist-1-track-1",
+                "author": "",
+                "name": "",
+                "url": "https://cdn.forgejs.org/samples/vrrroom/audio/dexters-lab.mp3"
+            },
+
+            {
+                "uid": "playlist-1-track-2",
+                "author": "",
+                "name": "",
+                "url": "https://cdn.forgejs.org/samples/vrrroom/audio/Conscious.mp3"
+            }
+        ]
+    },
+
+    "story":
+    {
+        "uid": "story-0",
+        "name": "i18n-storyName",
+        "slug": "i18n-storySlug",
+        "description": "i18n-storyDescription",
+        "default": "scene-0",
+
+        "scenes":
+        [
+            {
+                "uid": "scene-0",
+                "name": "Introduction Karting",
+                "slug": "intro",
+                "description": "",
+                "tags": ["intro", "start"],
+
+                "media": {},
+
+                "plugins":
+                {
+                    "instances":
+                    [
+                        {
+                            "uid": "org.forgejs.simplevideo-0",
+                            "engine": "org.forgejs.simplevideo",
+
+                            "options":
+                            {
+                                "height": "100%",
+                                "width": "100%",
+                                "horizontalCenter": true
+                            },
+
+                            "data":
+                            {
+                                "video": "https://cdn.forgejs.org/samples/vrrroom/videos/intro.mp4"
+                            },
+
+                            "events":
+                            {
+                                "onEnded": ["action-next"]
+                            },
+
+                            "index": 0,
+                            "keep": false
+                        },
+
+                        {
+                            "uid": "org.forgejs.simpletext-intro",
+                            "engine": "org.forgejs.simpletext",
+
+                            "options":
+                            {
+                                "config":
+                                {
+                                    "i18n": true,
+                                    "value": "intro-text",
+                                    "fontFamily": "pfdintextprolight",
+                                    "fontSize": 30,
+                                    "color": "white",
+                                    "textAlign": "center"
+                                },
+
+                                "bottom": 270,
+                                "horizontalCenter": true
+                            },
+
+                            "data": {},
+                            "index": 13,
+                            "keep": false
+                        },
+
+                        {
+                            "uid": "org.forgejs.simplebutton-start",
+                            "engine": "org.forgejs.simplebutton",
+
+                            "options":
+                            {
+                                "bottom": 160,
+                                "horizontalCenter": true,
+                                "defaultSkin": false,
+
+                                "skin":
+                                {
+                                    "out":
+                                    {
+                                        "image":
+                                        {
+                                            "i18n": true,
+                                            "url": "intro-btn",
+                                            "alpha": 0.7
+                                        }
+                                    },
+
+                                    "over":
+                                    {
+                                        "image":
+                                        {
+                                            "alpha": 1
+                                        }
+                                    }
+                                }
+                            },
+
+                            "data": {},
+
+                            "events":
+                            {
+                                "onClick": ["action-plugin-video-play", "action-plugin-localeselector-hide", "action-plugin-button-hide"]
+                            },
+
+                            "index": 13,
+                            "keep": false
+                        },
+
+                        {
+                            "uid": "org.forgejs.localeselector-0",
+                            "engine": "org.forgejs.localeselector",
+
+                            "options":
+                            {
+                                "bottom": 80,
+                                "horizontalCenter": true,
+                                "baseURL": "https://cdn.forgejs.org/samples/vrrroom/assets/flags/"
+                            },
+
+                            "data": {},
+
+                            "index": 13,
+                            "keep": false
+                        }
+                    ]
+                }
+            },
+
+            {
+
                 "uid": "scene-1",
-                "name": "Second scene",
-                "slug": "second-scene",
-                "description": "This is the second scene",
+                "name": "Driver selection",
+                "slug": "driver-selection",
+                "description": "i18n-scene-1-description",
+                "tags": ["tourism", "bike", "gps", "video360", "geolocalized"],
 
                 "media":
                 {
@@ -172,84 +283,294 @@
                     "source":
                     {
                         "format": "equi",
-                        "url": "img/pano-1.jpg"
+                        "url": "https://cdn.forgejs.org/samples/vrrroom/panos/pano-scene-1-v3.jpg"
                     }
                 },
 
-                "view":
+                "playlists":
                 {
-                    "type": "rectilinear"
+                    "enabled": true,
+                    "default": "playlist-0"
                 },
 
                 "camera":
                 {
+                    "parallax": 0.2,
+
                     "yaw":
                     {
-                        "default": 5.5
+                        "min": -180,
+                        "max": 180
+                    },
+
+                    "pitch":
+                    {
+                        "min": 0,
+                        "max": 0
+                    },
+
+                    "fov":
+                    {
+                        "default": 80,
+                        "min": 80,
+                        "max": 80
                     }
+                },
+
+                "plugins":
+                {
+                    "instances":
+                    [
+                        {
+                            "uid": "org.forgejs.kartingdriverspot-martin",
+                            "engine": "org.forgejs.kartingdriverspot",
+
+                            "options":
+                            {
+                                "top": 10,
+                                "left": 10,
+                                "background": "rgba(0,0,0,0.75)",
+                                "width": 150,
+                                "height": 100,
+                                "name": "MARTIN",
+                                "size": "1.88 m",
+                                "weight": "78 Kg"
+                            },
+
+                            "data": {},
+
+                            "events": {},
+
+                            "keep": false,
+                            "index": 123
+                        },
+
+                        {
+                            "uid": "org.forgejs.kartingdriverspot-samy",
+                            "engine": "org.forgejs.kartingdriverspot",
+
+                            "options":
+                            {
+                                "top": 10,
+                                "right": 10,
+                                "background": "rgba(0,0,0,0.75)",
+                                "width": 150,
+                                "height": 100,
+                                "name": "SAMY",
+                                "size": "1.87 m",
+                                "weight": "75 Kg"
+                            },
+
+                            "data": {},
+
+                            "events": {},
+
+                            "keep": false,
+                            "index": 123
+                        }
+                    ]
                 },
 
                 "hotspots":
                 [
                     {
-                        "uid": "hotspot-s1-0",
+                        "uid": "hotspot-3d-martin",
+                        "tags": [],
+                        "visible": true,
+                        "type": "3d",
 
                         "transform":
                         {
                             "position":
                             {
-                                "theta": 118,
-                                "phi": -6,
-                                "radius": 400
+                                "radius": 400,
+                                "theta": -34,
+                                "phi": -16
                             },
 
                             "rotation":
                             {
-                                "x": 85,
-                                "y": -118
+                                "x": 0,
+                                "y": 30,
+                                "z": 0
+                            },
+
+                            "scale":
+                            {
+                                "x": 2,
+                                "y": 2
                             }
                         },
 
                         "material":
                         {
-                            "image": "img/ChevronUpCircle_white_64.png",
+                            "image": "https://cdn.forgejs.org/samples/vrrroom/assets/martin-small.png",
                             "opacity": 1
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 60,
+                                "height": 102
+                            }
                         },
 
                         "events":
                         {
-                            "onClick": ["action-loadscene-2", "action-camera-3"]
+                            "onClick": ["hotspotAction-martin"],
+                            "onOver": ["hotspotAction-martin-over"],
+                            "onOut": ["hotspotAction-martin-out"]
                         }
                     },
 
                     {
-                        "uid": "hotspot-s1-1",
+                        "uid": "hotspot-3d-kartingdriverspot-martin",
+                        "tags": [],
+                        "visible": true,
+                        "type": "3d",
 
                         "transform":
                         {
                             "position":
                             {
-                                "theta": -179,
-                                "phi": -11,
-                                "radius": 400
+                                "radius": 450,
+                                "theta": -33,
+                                "phi": 20
                             },
 
                             "rotation":
                             {
-                                "x": 85,
-                                "y": 179
+                                "x": 0,
+                                "y": 30,
+                                "z": 0
                             }
                         },
 
                         "material":
                         {
-                            "image": "img/ChevronUpCircle_white_64.png",
-                            "opacity": 1
+                            "plugin": "org.forgejs.kartingdriverspot-martin",
+                            "update": true
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 150,
+                                "height": 100
+                            }
                         },
 
                         "events":
                         {
-                            "onClick": ["action-loadscene-0", "action-camera-4"]
+                            "onClick": ["hotspotAction-martin"],
+                            "onOver": ["hotspotAction-martin-over"],
+                            "onOut": ["hotspotAction-martin-out"]
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-3d-samy",
+                        "tags": [],
+                        "visible": true,
+                        "type": "3d",
+                        "hotspotStyle": {},
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 450,
+                                "theta": 33,
+                                "phi": -14
+                            },
+
+                            "rotation":
+                            {
+                                "x": 0,
+                                "y": -30,
+                                "z": 0
+                            },
+
+                            "scale":
+                            {
+                                "x": 2.15,
+                                "y": 2.15
+                            }
+                        },
+
+                        "material":
+                        {
+                            "image": "https://cdn.forgejs.org/samples/vrrroom/assets/samy-small.png",
+                            "opacity": 1
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 60,
+                                "height": 90
+                            }
+                        },
+
+                        "events":
+                        {
+                            "onClick": ["hotspotAction-samy"],
+                            "onOver": ["hotspotAction-samy-over"],
+                            "onOut": ["hotspotAction-samy-out"]
+                        }
+                    },
+
+                    {
+                        "uid": "hotspot-3d-kartingdriverspot-samy",
+                        "tags": [],
+                        "visible": true,
+                        "type": "3d",
+
+                        "transform":
+                        {
+                            "position":
+                            {
+                                "radius": 400,
+                                "theta": 30,
+                                "phi": 20
+                            },
+
+                            "rotation":
+                            {
+                                "x": 0,
+                                "y": -30,
+                                "z": 0
+                            }
+                        },
+
+                        "material":
+                        {
+                            "plugin": "org.forgejs.kartingdriverspot-samy",
+                            "update": true
+                        },
+
+                        "geometry":
+                        {
+                            "type": "plane",
+                            "options":
+                            {
+                                "width": 150,
+                                "height": 100
+                            }
+                        },
+
+                        "events":
+                        {
+                            "onClick": ["hotspotAction-samy"],
+                            "onOver": ["hotspotAction-samy-over"],
+                            "onOut": ["hotspotAction-samy-out"]
                         }
                     }
                 ]
@@ -257,421 +578,396 @@
 
             {
                 "uid": "scene-2",
-                "name": "Third Scene",
-                "slug": "third-scene",
-                "description": "This is the third scene",
+                "name": "Samy karting",
+                "slug": "samy-karting",
+                "description": "i18n-scene-2-description",
+                "tags": ["circuit", "samy", "kart"],
 
                 "media":
                 {
                     "uid": "media-2",
-                    "type": "image",
+                    "type": "video",
 
                     "source":
                     {
                         "format": "equi",
-                        "url": "img/pano-2.jpg"
+                        "streaming": "dash",
+                        "url": "https://cdn.forgejs.org/samples/vrrroom/videos/460017/460017.mpd"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": true,
+                        "volume": 0
                     }
                 },
 
                 "view":
                 {
-                    "type": "rectilinear"
+                    "type": "GoPro"
                 },
 
-                "camera":
+                "playlists":
                 {
-                    "yaw":
-                    {
-                        "default": -90
-                    }
+
+                    "enabled": true,
+                    "default": "playlist-1"
                 },
 
-                "hotspots":
-                [
-                    {
-                        "uid": "hotspot-s2-0",
-
-                        "transform":
+                "plugins":
+                {
+                    "configurations":
+                    [
                         {
-                            "position":
-                            {
-                                "theta": 110,
-                                "phi": -8,
-                                "radius": 400
-                            },
+                            "instance": "org.forgejs.ranking-0",
 
-                            "rotation":
+                            "options":
                             {
-                                "x": 85,
-                                "y": -110
+                                "source": "media"
                             }
                         },
 
-                        "material":
                         {
-                            "image": "img/ChevronUpCircle_white_64.png",
-                            "opacity": 1
-                        },
+                            "instance": "org.forgejs.googlemaps-0",
 
-                        "events":
-                        {
-                            "onClick": ["action-loadscene-1", "action-camera-5"]
-                        }
-                    },
-
-                    {
-                        "uid": "hotspot-s2-1",
-
-                        "transform":
-                        {
-                            "position":
+                            "data":
                             {
-                                "theta": 2,
-                                "phi": -11,
-                                "radius": 400
+                                "gpx": "https://cdn.forgejs.org/samples/vrrroom/gpx/samy.xml"
                             },
 
-                            "rotation":
+                            "options":
                             {
-                                "x": 85,
-                                "y": -2
+                                "source": "media"
                             }
                         },
 
-                        "material":
                         {
-                            "image": "img/ChevronUpCircle_white_64.png",
-                            "opacity": 1
+                            "instance": "org.forgejs.heartbeat-0",
+
+                            "data":
+                            {
+                                "keyframes": "https://cdn.forgejs.org/samples/vrrroom/timeline/heartbeat-samy.json"
+                            },
+
+                            "options":
+                            {
+                                "source": "media"
+                            }
                         },
 
-                        "events":
                         {
-                            "onClick": ["action-loadscene-3", "action-camera-6"]
+                            "instance": "org.forgejs.speedometer-0",
+
+                            "data":
+                            {
+                                "keyframes": "https://cdn.forgejs.org/samples/vrrroom/timeline/speed-samy.json"
+                            },
+
+                            "options":
+                            {
+                                "source": "media"
+                            }
                         }
-                    }
-                ]
+                    ]
+                }
             },
 
             {
                 "uid": "scene-3",
-                "name": "Fourth Scene",
-                "slug": "fourth-scene",
-                "description": "This is the fourth scene",
+                "name": "Martin karting",
+                "slug": "martin-karting",
+                "description": "i18n-scene-3-description",
+                "tags": ["circuit", "martin", "kart"],
 
                 "media":
                 {
                     "uid": "media-3",
-                    "type": "image",
+                    "type": "video",
 
                     "source":
                     {
                         "format": "equi",
-                        "url": "img/pano-3.jpg"
+                        "streaming": "dash",
+                        "url": "https://cdn.forgejs.org/samples/vrrroom/videos/459989/459989.mpd"
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": true,
+                        "volume": 0
                     }
                 },
 
                 "view":
                 {
-                    "type": "rectilinear"
+                    "type": "GoPro"
                 },
 
-                "camera":
+                "playlists":
                 {
-                    "yaw":
-                    {
-                        "default": 0
-                    }
+                    "enabled": true,
+                    "default": "playlist-1"
                 },
 
-                "hotspots":
-                [
-                    {
-                        "uid": "hotspot-s3-0",
-
-                        "transform":
+                "plugins":
+                {
+                    "configurations":
+                    [
                         {
-                            "position":
-                            {
-                                "theta": 5,
-                                "phi": -9,
-                                "radius": 400
-                            },
+                            "instance": "org.forgejs.ranking-0",
 
-                            "rotation":
+                            "options":
                             {
-                                "x": 85,
-                                "y": -5
+                                "source": "media"
                             }
                         },
 
-                        "material":
                         {
-                            "image": "img/ChevronUpCircle_white_64.png",
-                            "opacity": 1
-                        },
+                            "instance": "org.forgejs.googlemaps-0",
 
-                        "events":
-                        {
-                            "onClick": ["action-loadscene-4", "action-camera-7"]
-                        }
-                    },
-
-                    {
-                        "uid": "hotspot-s3-1",
-
-                        "transform":
-                        {
-                            "position":
+                            "data":
                             {
-                                "theta": 84,
-                                "phi": -25,
-                                "radius": 400
+                                "gpx": "https://cdn.forgejs.org/samples/vrrroom/gpx/martin.xml"
                             },
 
-                            "rotation":
+                            "options":
                             {
-                                "x": 85,
-                                "y": -84
+                                "source": "media"
                             }
                         },
 
-                        "material":
                         {
-                            "image": "img/ChevronUpCircle_white_64.png",
-                            "opacity": 1
-                        },
+                            "instance": "org.forgejs.heartbeat-0",
 
-                        "events":
-                        {
-                            "onClick": ["action-loadscene-0", "action-camera-8"]
-                        }
-                    },
-
-                    {
-                        "uid": "hotspot-s3-2",
-
-                        "transform":
-                        {
-                            "position":
+                            "data":
                             {
-                                "theta": -175,
-                                "phi": -5,
-                                "radius": 400
+                                "keyframes": "https://cdn.forgejs.org/samples/vrrroom/timeline/heartbeat-martin.json"
                             },
 
-                            "rotation":
+                            "options":
                             {
-                                "x": 82,
-                                "y": 175
+                                "source": "media"
                             }
                         },
 
-                        "material":
                         {
-                            "image": "img/ChevronUpCircle_white_64.png",
-                            "opacity": 1
-                        },
+                            "instance": "org.forgejs.speedometer-0",
 
-                        "events":
-                        {
-                            "onClick": ["action-loadscene-2", "action-camera-9"]
+                            "data":
+                            {
+                                "keyframes": "https://cdn.forgejs.org/samples/vrrroom/timeline/speed-martin.json"
+                            },
+
+                            "options":
+                            {
+                                "source": "media"
+                            }
                         }
-                    }
-                ]
+                    ]
+                }
+
             },
 
             {
                 "uid": "scene-4",
-                "name": "Fifth Scene",
-                "slug": "fifth-scene",
-                "description": "This is the fifth scene",
+                "name": "Samy karting cinema mode",
+                "slug": "samy-karting-cinema",
+                "description": "",
+                "tags": ["circuit", "samy", "kart", "cinema"],
 
-                "media":
+                "media": {},
+
+                "playlists":
                 {
-                    "uid": "media-4",
-                    "type": "image",
-
-                    "source":
-                    {
-                        "format": "equi",
-                        "url": "img/pano-4.jpg"
-                    }
+                    "enabled": true,
+                    "default": "playlist-1"
                 },
 
-                "view":
+                "plugins":
                 {
-                    "type": "rectilinear"
-                },
-
-                "camera":
-                {
-                    "yaw":
-                    {
-                        "default": 0
-                    }
-                },
-
-                "hotspots":
-                [
-                    {
-                        "uid": "hotspot-s4-0",
-
-                        "transform":
+                    "instances":
+                    [
                         {
-                            "position":
+                            "uid": "org.forgejs.simplevideo-1",
+                            "engine": "org.forgejs.simplevideo",
+
+                            "options":
                             {
-                                "theta": 0,
-                                "phi": -11,
-                                "radius": 400
+                                "height": 1080,
+                                "width": 2048,
+                                "horizontalCenter": true,
+                                "autoPlay": true,
+                                "loop": true,
+                                "volume": 0
                             },
 
-                            "rotation":
+                            "data":
                             {
-                                "x": 85,
-                                "y": 0
+                                "streaming": "dash",
+                                "video": "https://cdn.forgejs.org/samples/vrrroom/videos/460036/460036.mpd"
+                            },
+
+                            "index": 0,
+                            "keep": false
+                        }
+                    ],
+
+                    "configurations":
+                    [
+                        {
+                            "instance": "org.forgejs.ranking-0",
+
+                            "options":
+                            {
+                                "source": "org.forgejs.simplevideo-1"
                             }
                         },
 
-                        "material":
                         {
-                            "image": "img/ChevronUpCircle_white_64.png",
-                            "opacity": 1
-                        },
+                            "instance": "org.forgejs.googlemaps-0",
 
-                        "events":
-                        {
-                            "onClick": ["action-loadscene-5", "action-camera-10"]
-                        }
-                    },
-
-                    {
-                        "uid": "hotspot-s4-1",
-
-                        "transform":
-                        {
-                            "position":
+                            "data":
                             {
-                                "theta": 130,
-                                "phi": -33,
-                                "radius": 400
+                                "gpx": "https://cdn.forgejs.org/samples/vrrroom/gpx/samy.xml"
                             },
 
-                            "rotation":
+                            "options":
                             {
-                                "x": 85,
-                                "y": -130
+                                "source": "org.forgejs.simplevideo-1"
                             }
                         },
 
-                        "material":
                         {
-                            "image": "img/ChevronUpCircle_white_64.png",
-                            "opacity": 1
-                        },
+                            "instance": "org.forgejs.heartbeat-0",
 
-                        "events":
-                        {
-                            "onClick": ["action-loadscene-0", "action-camera-11"]
-                        }
-                    },
-
-                    {
-                        "uid": "hotspot-s4-2",
-
-                        "transform":
-                        {
-                            "position":
+                            "data":
                             {
-                                "theta": 178,
-                                "phi": -8,
-                                "radius": 400
+                                "keyframes": "https://cdn.forgejs.org/samples/vrrroom/timeline/heartbeat-samy.json"
                             },
 
-                            "rotation":
+                            "options":
                             {
-                                "x": 82,
-                                "y": -178
+                                "source": "org.forgejs.simplevideo-1"
                             }
                         },
 
-                        "material":
                         {
-                            "image": "img/ChevronUpCircle_white_64.png",
-                            "opacity": 1
-                        },
+                            "instance": "org.forgejs.speedometer-0",
 
-                        "events":
-                        {
-                            "onClick": ["action-loadscene-3", "action-camera-12"]
+                            "data":
+                            {
+                                "keyframes": "https://cdn.forgejs.org/samples/vrrroom/timeline/speed-samy.json"
+                            },
+
+                            "options":
+                            {
+                                "source": "org.forgejs.simplevideo-1"
+                            }
                         }
-                    }
-                ]
+                    ]
+                }
             },
 
             {
                 "uid": "scene-5",
-                "name": "Sixth Scene",
-                "slug": "sixth-scene",
-                "description": "This is the sixth scene",
+                "name": "Martin karting cinema mode",
+                "slug": "martin-karting-cinema",
+                "description": "",
+                "tags": ["circuit", "martin", "kart", "cinema"],
 
-                "media":
+                "media": {},
+
+                "playlists":
                 {
-                    "uid": "media-5",
-                    "type": "image",
-
-                    "source":
-                    {
-                        "format": "equi",
-                        "url": "img/pano-5.jpg"
-                    }
+                    "enabled": true,
+                    "default": "playlist-1"
                 },
 
-                "view":
+                "plugins":
                 {
-                    "type": "rectilinear"
-                },
-
-                "camera":
-                {
-                    "yaw":
-                    {
-                        "default": 0
-                    }
-                },
-
-                "hotspots":
-                [
-                    {
-                        "uid": "hotspot-s5-0",
-
-                        "transform":
+                    "instances":
+                    [
                         {
-                            "position":
+                            "uid": "org.forgejs.simplevideo-2",
+                            "engine": "org.forgejs.simplevideo",
+
+                            "options":
                             {
-                                "theta": -178,
-                                "phi": -11,
-                                "radius": 400
+                                "height": 1080,
+                                "width": 2048,
+                                "horizontalCenter": true,
+                                "autoPlay": true,
+                                "loop": true,
+                                "volume": 0
                             },
 
-                            "rotation":
+                            "data":
                             {
-                                "x": 82,
-                                "y": 178
+                                "streaming": "dash",
+                                "video": "https://cdn.forgejs.org/samples/vrrroom/videos/460045/460045.mpd"
+                            },
+
+                            "index": 0,
+                            "keep": false
+                        }
+                    ],
+
+                    "configurations":
+                    [
+                        {
+                            "instance": "org.forgejs.ranking-0",
+
+                            "options":
+                            {
+                                "source": "org.forgejs.simplevideo-2"
                             }
                         },
 
-                        "material":
                         {
-                            "image": "img/ChevronUpCircle_white_64.png",
-                            "opacity": 1
+                            "instance": "org.forgejs.googlemaps-0",
+
+                            "data":
+                            {
+                                "gpx": "https://cdn.forgejs.org/samples/vrrroom/gpx/martin.xml"
+                            },
+
+                            "options":
+                            {
+                                "source": "org.forgejs.simplevideo-2"
+                            }
                         },
 
-                        "events":
                         {
-                            "onClick": ["action-loadscene-4", "action-camera-13"]
+                            "instance": "org.forgejs.heartbeat-0",
+
+                            "data":
+                            {
+                                "keyframes": "https://cdn.forgejs.org/samples/vrrroom/timeline/heartbeat-martin.json"
+                            },
+
+                            "options":
+                            {
+                                "source": "org.forgejs.simplevideo-2"
+                            }
+                        },
+
+                        {
+                            "instance": "org.forgejs.speedometer-0",
+
+                            "data":
+                            {
+                                "keyframes": "https://cdn.forgejs.org/samples/vrrroom/timeline/speed-martin.json"
+                            },
+
+                            "options":
+                            {
+                                "source": "org.forgejs.simplevideo-2"
+                            }
                         }
-                    }
-                ]
+                    ]
+                }
             }
         ]
     },
@@ -679,40 +975,47 @@
     "actions":
     [
         {
-            "uid": "action-loadscene-0",
+            "uid": "action-next",
             "target": "viewer.story",
 
             "method":
             {
-                "name": "loadScene",
-                "args": ["scene-0"]
+                "name": "nextScene"
             }
         },
 
         {
-            "uid": "action-loadscene-1",
-            "target": "viewer.story",
+            "uid": "action-plugin-video-play",
+            "target": "org.forgejs.simplevideo-0",
 
             "method":
             {
-                "name": "loadScene",
-                "args": ["scene-1"]
+                "name": "play"
             }
         },
 
         {
-            "uid": "action-loadscene-2",
-            "target": "viewer.story",
+            "uid": "action-plugin-localeselector-hide",
+            "target": "org.forgejs.localeselector-0",
 
             "method":
             {
-                "name": "loadScene",
-                "args": ["scene-2"]
+                "name": "hide"
             }
         },
 
         {
-            "uid": "action-loadscene-3",
+            "uid": "action-plugin-button-hide",
+            "target": "org.forgejs.simplebutton-start",
+
+            "method":
+            {
+                "name": "hide"
+            }
+        },
+
+        {
+            "uid": "hotspotAction-martin",
             "target": "viewer.story",
 
             "method":
@@ -723,191 +1026,141 @@
         },
 
         {
-            "uid": "action-loadscene-4",
+            "uid": "hotspotAction-martin-over",
+            "target": "org.forgejs.kartingdriverspot-martin",
+
+            "method":
+            {
+                "name": "setTextColor",
+                "args": ["#009ee2"]
+            }
+        },
+
+        {
+            "uid": "hotspotAction-martin-out",
+            "target": "org.forgejs.kartingdriverspot-martin",
+
+            "method":
+            {
+                "name": "setTextColor",
+                "args": ["#fff"]
+            }
+        },
+
+        {
+            "uid": "hotspotAction-samy",
             "target": "viewer.story",
 
             "method":
             {
                 "name": "loadScene",
-                "args": ["scene-4"]
+                "args": ["scene-2"]
             }
         },
 
         {
-            "uid": "action-loadscene-5",
-            "target": "viewer.story",
+            "uid": "hotspotAction-samy-over",
+            "target": "org.forgejs.kartingdriverspot-samy",
 
             "method":
             {
-                "name": "loadScene",
-                "args": ["scene-5"]
+                "name": "setTextColor",
+                "args": ["#009ee2"]
             }
         },
 
         {
-            "uid": "action-camera-0",
-            "target": "viewer.renderer.camera",
+            "uid": "hotspotAction-samy-out",
+            "target": "org.forgejs.kartingdriverspot-samy",
 
             "method":
             {
-                "name": "lookAt",
-                "args": [5, 0, 0]
-            }
-        },
-
-        {
-            "uid": "action-camera-1",
-            "target": "viewer.renderer.camera",
-
-            "method":
-            {
-                "name": "lookAt",
-                "args": [-96, 0, 0]
-            }
-        },
-
-        {
-            "uid": "action-camera-2",
-            "target": "viewer.renderer.camera",
-
-            "method":
-            {
-                "name": "lookAt",
-                "args": [-39, 0, 0]
-            }
-        },
-
-        {
-            "uid": "action-camera-3",
-            "target": "viewer.renderer.camera",
-
-            "method":
-            {
-                "name": "lookAt",
-                "args": [-70, 0, 0]
-            }
-        },
-
-        {
-            "uid": "action-camera-4",
-            "target": "viewer.renderer.camera",
-
-            "method":
-            {
-                "name": "lookAt",
-                "args": [180, 0, 0]
-            }
-        },
-
-        {
-            "uid": "action-camera-5",
-            "target": "viewer.renderer.camera",
-
-            "method":
-            {
-                "name": "lookAt",
-                "args": [-57.5, 0, 0]
-            }
-        },
-
-        {
-            "uid": "action-camera-6",
-            "target": "viewer.renderer.camera",
-
-            "method":
-            {
-                "name": "lookAt",
-                "args": [2, 0, 0]
-            }
-        },
-
-        {
-            "uid": "action-camera-7",
-            "target": "viewer.renderer.camera",
-
-            "method":
-            {
-                "name": "lookAt",
-                "args": [5, 0, 0]
-            }
-        },
-
-        {
-            "uid": "action-camera-8",
-            "target": "viewer.renderer.camera",
-
-            "method":
-            {
-                "name": "lookAt",
-                "args": [-96, 0, 0]
-            }
-        },
-
-        {
-            "uid": "action-camera-9",
-            "target": "viewer.renderer.camera",
-
-            "method":
-            {
-                "name": "lookAt",
-                "args": [-175, 0, 0]
-            }
-        },
-
-        {
-            "uid": "action-camera-10",
-            "target": "viewer.renderer.camera",
-
-            "method":
-            {
-                "name": "lookAt",
-                "args": [0, 0, 0]
-            }
-        },
-
-        {
-            "uid": "action-camera-11",
-            "target": "viewer.renderer.camera",
-
-            "method":
-            {
-                "name": "lookAt",
-                "args": [-50, 0, 0]
-            }
-        },
-
-        {
-            "uid": "action-camera-12",
-            "target": "viewer.renderer.camera",
-
-            "method":
-            {
-                "name": "lookAt",
-                "args": [178, 0, 0]
-            }
-        },
-
-        {
-            "uid": "action-camera-13",
-            "target": "viewer.renderer.camera",
-
-            "method":
-            {
-                "name": "lookAt",
-                "args": [-178, 0, 0]
+                "name": "setTextColor",
+                "args": ["#fff"]
             }
         }
     ],
 
     "plugins":
     {
-        "prefix": "plugins/",
+        "prefix": "./plugins/",
 
         "engines":
         [
             {
-                "uid": "org.forgejs.webvrbutton",
-                "url": "WebVRButton/",
+                "uid": "org.forgejs.letterbox",
+                "url": "Letterbox/",
+                "manifest": "manifest.json"
+            },
+
+            {
+                "uid": "org.forgejs.localeselector",
+                "url": "LocaleSelector/",
+                "prefix": "../../plugins/",
+                "manifest": "manifest.json"
+            },
+
+            {
+                "uid": "org.forgejs.simplebutton",
+                "url": "SimpleButton/",
+                "prefix": "../../plugins/",
+                "manifest": "manifest.json"
+            },
+
+            {
+                "uid": "org.forgejs.simpletext",
+                "url": "SimpleText/",
+                "prefix": "../../plugins/",
+                "manifest": "manifest.json"
+            },
+
+            {
+                "uid": "org.forgejs.simpleimage",
+                "url": "SimpleImage/",
+                "prefix": "../../plugins/",
+                "manifest": "manifest.json"
+            },
+
+            {
+                "uid": "org.forgejs.kartingdriverspot",
+                "url": "KartingDriverSpot/",
+                "manifest": "manifest.json"
+            },
+
+            {
+                "uid": "org.forgejs.googlemaps",
+                "url": "GoogleMaps/",
+                "manifest": "manifest.json"
+            },
+
+            {
+                "uid": "org.forgejs.ranking",
+                "url": "Ranking/",
+                "manifest": "manifest.json"
+            },
+
+            {
+                "uid": "org.forgejs.gooeymenu",
+                "url": "GooeyMenu/",
+                "manifest": "manifest.json"
+            },
+
+            {
+                "uid": "org.forgejs.simplevideo",
+                "url": "SimpleVideo/",
+                "prefix": "../../plugins/",
+                "manifest": "manifest.json"
+            },
+
+            {
+                "uid": "org.forgejs.heartbeat",
+                "url": "Heartbeat/",
+                "manifest": "manifest.json"
+            },
+
+            {
+                "uid": "org.forgejs.speedometer",
+                "url": "Speedometer/",
                 "manifest": "manifest.json"
             }
         ],
@@ -915,12 +1168,276 @@
         "instances":
         [
             {
-                "uid": "webvrbutton",
-                "engine": "org.forgejs.webvrbutton",
+                "uid": "org.forgejs.letterbox-0",
+                "engine": "org.forgejs.letterbox",
+
                 "options":
                 {
-                    "position": "bottom"
-                }
+                    "stripeHeight": 80,
+                    "stripeColor": "black"
+                },
+
+                "index": 1
+            },
+
+            {
+                "uid": "org.forgejs.gooeymenu-0",
+                "engine": "org.forgejs.gooeymenu",
+                "scenes": ["scene-2", "scene-3", "scene-4", "scene-5"],
+
+                "options":
+                {
+                    "left": -30,
+                    "bottom": 40,
+
+                    "items":
+                    [
+                    {
+                            "id": "music",
+                            "title": "gooeymenu-item-0",
+
+                            "click":
+                            {
+                                "action": "playlist",
+                                "target": "next"
+                            }
+                        },
+
+                        {
+                            "id": "rank",
+                            "title": "gooeymenu-item-1",
+
+                            "click":
+                            {
+                                "action": "visibility",
+                                "target": ["org.forgejs.ranking-0"]
+                            },
+
+                            "ticked": true,
+                            "toggle": true
+                        },
+
+                        {
+                            "id": "map",
+                            "title": "gooeymenu-item-2",
+
+                            "click":
+                            {
+                                "action": "visibility",
+                                "target": ["org.forgejs.googlemaps-0"]
+                            },
+
+                            "ticked": true,
+                            "toggle": true
+                        },
+
+                        {
+                            "id": "heart",
+                            "title": "gooeymenu-item-3",
+
+                            "click":
+                            {
+                                "action": "visibility",
+                                "target": ["org.forgejs.heartbeat-0", "org.forgejs.speedometer-0"]
+                            },
+
+                            "ticked": true,
+                            "toggle": true
+                        },
+
+                        {
+                            "id": "cinema",
+                            "title": "gooeymenu-item-4",
+
+                            "click":
+                            {
+                                "action": "scene",
+                                "target": [["scene-2", "scene-4"], ["scene-3", "scene-5"]]
+                            },
+
+                            "toggle": true,
+                            "videotime": "org.forgejs.ranking-0"
+                        },
+
+                        {
+                            "id": "home",
+                            "title": "gooeymenu-item-5",
+
+                            "click":
+                            {
+                                "action": "scene",
+                                "target": "scene-0"
+                            }
+                        }
+                    ]
+                },
+
+                "index": 20
+            },
+
+            {
+                "uid": "org.forgejs.ranking-0",
+                "engine": "org.forgejs.ranking",
+                "scenes": ["scene-2", "scene-3", "scene-4", "scene-5"],
+
+                "options":
+                {
+                    "top": 90,
+                    "left": 10,
+                    "borderColor": "#009ee2",
+
+                    "drivers":
+                    [
+                        {
+                            "name": "Martin",
+                            "type": "image",
+                            "thumb": "https://cdn.forgejs.org/samples/vrrroom/assets/martin-thumbnail.jpg",
+                            "scenes": [ "scene-3", "scene-5"],
+
+                            "keyframes":
+                            [
+                                { "ts": 0, "rank": 0 },
+                                { "ts": 16000, "rank": 1 },
+                                { "ts": 30000, "rank": 0 },
+                                { "ts": 45000, "rank": 1 },
+                                { "ts": 55000, "rank": 0 },
+                                { "ts": 63000, "rank": 1 },
+                                { "ts": 73000, "rank": 0 },
+                                { "ts": 89000, "rank": 1 }
+                            ]
+                        },
+
+                        {
+                            "name": "Samy",
+                            "type": "image",
+                            "thumb": "https://cdn.forgejs.org/samples/vrrroom/assets/samy-thumbnail.jpg",
+                            "scenes": [ "scene-2", "scene-4"],
+
+                            "keyframes":
+                            [
+                                { "ts": 0, "rank": 1 },
+                                { "ts": 16000, "rank": 0 },
+                                { "ts": 30000, "rank": 1 },
+                                { "ts": 45000, "rank": 0 },
+                                { "ts": 55000, "rank": 1 },
+                                { "ts": 63000, "rank": 0 },
+                                { "ts": 73000, "rank": 1 },
+                                { "ts": 89000, "rank": 0 }
+                            ]
+                        }
+                    ]
+                },
+
+                "data": {},
+
+                "index": 20
+            },
+
+            {
+                "uid": "org.forgejs.googlemaps-0",
+                "engine": "org.forgejs.googlemaps",
+                "scenes": ["scene-2", "scene-3", "scene-4", "scene-5"],
+
+                "data":
+                {
+                    "googleMapsKey": "AIzaSyBaXB43aQIplDPVJ53ZzPfyUqxoHrd0HZk"
+                },
+
+                "options":
+                {
+                    "markerIcon":
+                    {
+                        "url": "https://cdn.forgejs.org/samples/vrrroom/assets/helmet-30x30.png",
+                        "width": 30,
+                        "height": 30,
+                        "anchorX": 15,
+                        "anchorY": 15
+                    },
+
+                    "strokeColor": "#009ee2",
+                    "strokeOpacity": 1,
+                    "strokeWeight": 5,
+                    "width": 200,
+                    "height": 200,
+                    "right": 15,
+                    "bottom": 95
+                },
+
+                "events": {},
+
+                "index": 20
+            },
+
+            {
+                "uid": "org.forgejs.heartbeat-0",
+                "engine": "org.forgejs.heartbeat",
+                "scenes": ["scene-2", "scene-3", "scene-4", "scene-5"],
+
+                "options":
+                {
+                    "width": 125,
+                    "height": 45,
+                    "background": "rgba(255, 255, 255, 0.4)",
+                    "top": 95,
+                    "right": 15
+                },
+
+                "data": {},
+
+                "index": 20
+            },
+
+            {
+                "uid": "org.forgejs.speedometer-0",
+                "engine": "org.forgejs.speedometer",
+                "scenes": ["scene-2", "scene-3", "scene-4", "scene-5"],
+
+                "options":
+                {
+                    "width": 125,
+                    "height": 45,
+                    "background": "rgba(255, 255, 255, 0.4)",
+                    "top": 150,
+                    "right": 15
+                },
+
+                "data": {},
+
+                "index": 20
+            },
+
+            {
+                "uid": "org.forgejs.simpleimage-0",
+                "engine": "org.forgejs.simpleimage",
+                "scenes": ["scene-2", "scene-3", "scene-4", "scene-5"],
+
+                "options":
+                {
+                    "key": "simpleimage-helmet-scratch",
+                    "url": "https://cdn.forgejs.org/samples/vrrroom/assets/helmet-scratch.png",
+                    "alpha": 0.3
+                },
+
+                "data": {},
+
+                "index": 10
+            },
+
+            {
+                "uid": "org.forgejs.simpleimage-1",
+                "engine": "org.forgejs.simpleimage",
+                "scenes": ["scene-2", "scene-3", "scene-4", "scene-5"],
+
+                "options":
+                {
+                    "key": "simpleimage-helmet-vigneting",
+                    "url": "https://cdn.forgejs.org/samples/vrrroom/assets/helmet-vigneting.png",
+                    "alpha": 0.4
+                },
+
+                "data": {},
+
+                "index": 10
             }
         ]
     }

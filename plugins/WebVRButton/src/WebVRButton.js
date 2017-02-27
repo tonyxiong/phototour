@@ -19,7 +19,7 @@ ForgePlugins.WebVRButton = function()
      * @type {boolean}
      * @private
      */
-    this._vrActivated = false;
+    this._vrActivated = true;
 };
 
 ForgePlugins.WebVRButton.prototype =

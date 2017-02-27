@@ -1,143 +1,81 @@
 {
+    "controllers":
+    {
+        "enabled": false
+    },
+
     "story":
     {
-        "uid": "multiple-scenes-story",
-        "name": "Multiple Scenes Story",
-        "slug": "multiple-scenes-story",
-        "description": "This project have multiple scenes",
-        "default": "scene-3",
+        "uid": "director-story",
+        "name": "Director's Cut Story",
+        "slug": "director-story",
+        "description": "Tour in the photo.",
+        "default": "scene-0",
 
         "scenes":
         [
             {
-                "uid": "scene-1",
+                "uid": "scene-0",
                 "name": "First scene",
                 "slug": "first-scene",
                 "description": "This is the first scene",
 
                 "media":
                 {
-                    "uid": "media-1",
+                    "uid": "media-0",
                     "type": "image",
 
                     "source":
                     {
                         "format": "equi",
-                        "url": "img/01-forest.jpg"
+                        "url": "img/01-forest.jpg""
+                    },
+
+                    "options":
+                    {
+                        "autoPlay": true,
+                        "loop": true,
+                        "volume": 0.4
                     }
-                }
-            },
+                },
 
-            {
-                "uid": "scene-2",
-                "name": "Second scene",
-                "slug": "second-scene",
-                "description": "This is the second scene",
-
-                "media":
+                "view":
                 {
-                    "uid": "media-2",
-                    "type": "image",
+                    "type": "GoPro"
+                },
 
-                    "source":
-                    {
-                        "format": "equi",
-                        "url": "img/02-sand.jpg"
-                    }
-                }
-            },
-
-            {
-                "uid": "scene-3",
-                "name": "Third scene",
-                "slug": "third-scene",
-                "description": "This is the third and last scene",
-
-                "media":
+                "director":
                 {
-                    "uid": "media-3",
-                    "type": "image",
-
-                    "source":
+                    "animation":
                     {
-                        "format": "equi",
-                        "url": "img/03-snow.jpg"
+                        "enabled": true,
+                        "delay": 0,
+                        "stoppable": false,
+                        "loop": false,
+
+                        "tracks": ["director-track-0"]
                     }
                 }
             }
         ]
     },
 
-    "actions":
-    [
-        {
-            "uid": "action-prev",
-            "target": "viewer.story",
-
-            "method":
-            {
-                "name": "previousScene"
-            }
-        },
-
-        {
-            "uid": "action-next",
-            "target": "viewer.story",
-
-            "method":
-            {
-                "name": "nextScene"
-            }
-        }
-    ],
-
-    "plugins":
+    "director":
     {
-        "prefix": "plugins/",
-
-        "engines":
+        "tracks":
         [
             {
-                "uid": "org.forgejs.simplebutton",
-                "url": "SimpleButton/",
-                "manifest": "manifest.json"
-            }
-        ],
+                "uid": "director-track-0",
+                "name": "Director's track #0 name",
+                "description": "Director's track #0 description",
+                "smooth": true,
+                "cancelRoll": true,
 
-        "instances":
-        [
-            {
-                "uid": "simplebutton-previous",
-                "engine": "org.forgejs.simplebutton",
-
-                "options":
-                {
-                    "left": 5,
-                    "verticalCenter": true,
-                    "value": "Previous"
-                },
-
-                "events":
-                {
-                    "onClick": ["action-prev"]
-                }
-            },
-
-            {
-                "uid": "simplebutton-next",
-                "engine": "org.forgejs.simplebutton",
-
-                "options":
-                {
-                    "right": 5,
-                    "verticalCenter": true,
-                    "value": "Next"
-                },
-
-                "events":
-                {
-                    "onClick": ["action-next"]
-                }
+                "keyframes":
+                [
+                    { "time": 0,     "data": { "yaw": 100,  "pitch": 0,     "fov": 110 } },
+                    { "time": 6500,  "data": { "yaw": 100                              } }
+                ]
             }
         ]
     }

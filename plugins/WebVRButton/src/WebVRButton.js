@@ -125,6 +125,7 @@ ForgePlugins.WebVRButton.prototype =
 
         this._vrActivated = this.viewer.renderer.presentingVR;
 
+		alert(this._vrActivated);
         if (this._vrActivated === true)
         {
             this._btn.skin.out = FORGE.Utils.extendMultipleObjects(this._btn.skin.out,

@@ -38,6 +38,19 @@
                 {
                     "type": "GoPro"
                 },
+				
+				"camera":
+                {
+                    "pitch":
+                    {
+                        "default": -90
+                    },
+
+                    "fov":
+                    {
+                        "default": 140
+                    }
+                }
 
                 "director":
                 {
@@ -68,8 +81,8 @@
 
                 "keyframes":
                 [
-                    { "time": 0,     "data": { "yaw": -90,  "pitch": 0,     "fov": 360 } },
-                    { "time": 6500,  "data": { "yaw": 100,					"fov": 140 } }
+                    { "time": 0,     "data": { "yaw": 0,    "pitch": -90,  "roll":null,   "fov": 140 } },
+                    { "time": 6500,  "data": { "yaw": null,	"pitch": 0,	   "roll":null,	  "fov": 140 } }
                 ]
             }
         ]

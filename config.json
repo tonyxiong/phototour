@@ -41,6 +41,11 @@
 				
 				"camera":
                 {
+					"yaw":
+					{
+						"default": -90
+					},
+					
                     "pitch":
                     {
                         "default": -90
@@ -48,7 +53,7 @@
 
                     "fov":
                     {
-                        "default": 280
+                        "default": 360
                     }
                 },
 
@@ -81,8 +86,8 @@
 
                 "keyframes":
                 [
-                    { "time": 0,     "data": { "yaw": -90,    "pitch": -90,  "roll":null,   "fov": 320 } },
-                    { "time": 6500,  "data": { "yaw": null,	"pitch": 0,	   "roll":null,	  "fov": 90 } }
+                    { "time": 0,     "data": { "yaw": -90,    "pitch": -90,    "roll":null,   "fov": 360 } },
+                    { "time": 6500,  "data": { "yaw": -50,	  "pitch": 0,	   "roll":null,	  "fov": 90 } }
                 ]
             }
         ]
